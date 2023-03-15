@@ -10,9 +10,7 @@ let DB=process.env.DB
 
 app.use(express.json())
 
-app.use(cors({
-   origin:"http://localhost:3000"
-}))
+app.use(cors())
 
 app.get("/students",async(req,res)=>{
     try {

@@ -10,7 +10,9 @@ let DB=process.env.DB
 
 app.use(express.json())
 
-app.use(cors())
+app.use(cors({
+    origin : "https://bespoke-pegasus-3fdaed.netlify.app"
+}))
 
 app.get("/students",async(req,res)=>{
     try {
